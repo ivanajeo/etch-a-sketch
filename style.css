@@ -25,3 +25,19 @@
   #root, #__next {
     isolation: isolate;
   }
+
+.container {
+    height: 100vh;
+    width: 85%;
+    max-width: 960px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.drawing-pad {
+    border: 2px solid black;
+
+}
