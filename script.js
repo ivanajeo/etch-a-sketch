@@ -1,6 +1,7 @@
 const drawingPad = document.querySelector(".drawingPad");
 const squareBtn = document.querySelector(".squareBtn");
 const eraserBtn = document.querySelector(".eraserBtn");
+const clearBtn = document.querySelector(".clearBtn");
 
 let eraserMode = false;
 
@@ -53,4 +54,12 @@ squareBtn.addEventListener("click", () => {
 eraserBtn.addEventListener("click", () => {
     eraserMode = !eraserMode;
 })
+
+clearBtn.addEventListener("click", () => {
+    const squares = document.querySelectorAll(".square");
+    squares.forEach((square) => {
+        square.style.backgroundColor = "";
+    });
+});
+
 createSquares(10);
