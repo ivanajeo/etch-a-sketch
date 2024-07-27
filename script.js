@@ -4,7 +4,12 @@ const squareBtn = document.querySelector(".squareBtn");
 
 squareBtn.addEventListener("click", function() {
     drawingPad.textContent = "";
-    let squaresPerRow = parseInt(prompt("number of squares?"));
+    
+    let squaresPerRow;
+    do {
+        squaresPerRow = parseInt(prompt("number of squares?")); 
+    } while (squaresPerRow > 100);
+    
     let totalSquares = squaresPerRow**2;
     let squareWidth = `calc(100% / ${squaresPerRow})`;
     for (let i = 0; i < totalSquares; i++) {
