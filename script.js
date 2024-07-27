@@ -29,7 +29,7 @@ squareBtn.addEventListener("click", function() {
         let hoverCount = 0;
         square.addEventListener("mouseenter", function() {
             hoverCount += 1;
-            let newOpacity = Math.min(hoverCount * 0.1, 1);
+            let newOpacity = Math.min(hoverCount * 0.25, 1);
             let bgColor = `${randomBgColor}${newOpacity})`
             square.style.backgroundColor = bgColor;
         })
