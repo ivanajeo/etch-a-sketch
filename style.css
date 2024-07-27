@@ -41,6 +41,7 @@ body {
   hsl(204deg 57% 88%) 90%,
   hsl(200deg 53% 90%) 100%
 );
+  font-family: "Press Start 2P", system-ui;
 }
 
 .container {
