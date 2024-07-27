@@ -26,6 +26,23 @@
     isolation: isolate;
   }
 
+body {
+  background-image: linear-gradient(
+  90deg,
+  hsl(240deg 100% 71%) 0%,
+  hsl(236deg 96% 73%) 10%,
+  hsl(232deg 91% 75%) 20%,
+  hsl(228deg 87% 76%) 30%,
+  hsl(224deg 82% 78%) 40%,
+  hsl(220deg 76% 80%) 50%,
+  hsl(216deg 71% 82%) 60%,
+  hsl(212deg 67% 84%) 70%,
+  hsl(209deg 63% 86%) 80%,
+  hsl(204deg 57% 88%) 90%,
+  hsl(200deg 53% 90%) 100%
+);
+}
+
 .container {
     height: 100vh;
     width: 85%;
