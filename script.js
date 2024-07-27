@@ -14,7 +14,7 @@ squareBtn.addEventListener("click", function() {
 
     let squaresPerRow;
     do {
-        squaresPerRow = parseInt(prompt("number of squares? (max 100")); 
+        squaresPerRow = parseInt(prompt("number of squares? (max 100"), 10); 
     } while (squaresPerRow > 100);
     
     let totalSquares = squaresPerRow**2;
