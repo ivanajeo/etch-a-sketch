@@ -2,8 +2,11 @@ const drawingPad = document.querySelector(".drawingPad");
 const squareBtn = document.querySelector(".squareBtn");
 const eraserBtn = document.querySelector(".eraserBtn");
 const clearBtn = document.querySelector(".clearBtn");
+const colorBlackBtn = document.querySelector(".colorBlackBtn");
+const colorRandomBtn = document.querySelector(".colorRandomBtn");
 
 let eraserMode = false;
+let colorMode = "black";
 
 function getRandomBgColor() {
     let r = Math.floor(Math.random() * 256);
@@ -22,8 +25,9 @@ function createSquares(squaresPerRow) {
         let square = document.createElement("div");
         square.classList.add("square");
         square.style.flexBasis = squareWidth;
-
-        const randomBgColor = getRandomBgColor();
+        
+       
+            
         let hoverCount = 0;
         square.addEventListener("mouseenter", () => {
             if (eraserMode) {
@@ -31,8 +35,13 @@ function createSquares(squaresPerRow) {
             } else {
                 hoverCount += 1;
                 let newOpacity = Math.min(hoverCount * 0.5, 1);
-
-                square.style.backgroundColor = `${randomBgColor}${newOpacity}`;
+                let bgColor;
+                if (colorMode === "black") {
+                    bgColor = `rgba(0, 0, 0, `;
+                } else if (colorMode === "random") {
+                    bgColor = getRandomBgColor();
+                }
+                square.style.backgroundColor = `${bgColor}${newOpacity}`;
             }
         })
         drawingPad.appendChild(square);
@@ -62,4 +71,12 @@ clearBtn.addEventListener("click", () => {
     });
 });
 
+colorBlackBtn.addEventListener("click", () => {
+    colorMode = "black";
+})
+
+colorRandomBtn.addEventListener("click", () => {
+    colorMode = "random";
+
+})
 createSquares(10);
