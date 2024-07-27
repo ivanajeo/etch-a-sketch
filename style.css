@@ -40,7 +40,7 @@
     align-items: center;
 }
 
-.drawing-pad {
+.drawingPad {
     width: 500px;
     height: 500px;
     border: 2px solid black;
@@ -51,7 +51,3 @@
 .square {
     border: 1px solid red;
 }
-
-/* .square:hover {
-  background-color: rgb(0, 255, 0);
-} */

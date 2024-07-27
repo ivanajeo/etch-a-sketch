@@ -1,4 +1,4 @@
-const drawingPad = document.querySelector(".drawing-pad");
+const drawingPad = document.querySelector(".drawingPad");
 
 
 let squaresPerRow = parseInt(prompt("number of squares?"));
