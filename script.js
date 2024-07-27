@@ -2,6 +2,13 @@ const drawingPad = document.querySelector(".drawingPad");
 const squareBtn = document.querySelector(".squareBtn");
 
 
+function getRandomBgColor() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    return `rgba(${r}, ${g}, ${b}, `;
+}
+
 squareBtn.addEventListener("click", function() {
     drawingPad.textContent = "";
 
@@ -17,11 +24,14 @@ squareBtn.addEventListener("click", function() {
         square.classList.add("square");
         square.style.flexBasis = squareWidth;
 
+        let randomBgColor = getRandomBgColor();
+        
         let hoverCount = 0;
         square.addEventListener("mouseenter", function() {
             hoverCount += 1;
             let newOpacity = Math.min(hoverCount * 0.1, 1);
-            square.style.backgroundColor = `rgba(0, 255, 0, ${newOpacity})`;
+            let bgColor = `${randomBgColor}${newOpacity})`
+            square.style.backgroundColor = bgColor;
         })
     drawingPad.appendChild(square);
 };
