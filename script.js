@@ -60,11 +60,7 @@ squareBtn.addEventListener("click", () => {
 
 eraserBtn.addEventListener("click", () => {
     eraserMode = !eraserMode;
-    if (eraserMode) {
-        eraserBtn.classList.add("eraserBtn-active");
-    } else {
-        eraserBtn.classList.remove("eraserBtn-active");
-    }
+    eraserBtn.classList.toggle("eraserBtn-active", eraserMode);
 })
 
 clearBtn.addEventListener("click", () => {
