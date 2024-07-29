@@ -81,4 +81,4 @@ colorRandomBtn.addEventListener("click", () => {
     updateButtonState(colorRandomBtn, colorBlackBtn);
 })
 
-createSquares(10);
+createSquares(10); // Initialize with 10 squares per row
