@@ -115,6 +115,11 @@ body {
   color: #fff;
 }
 
+
+.colorBlackBtn:is(:hover, :active) {
+  background-color:  #000;
+}
+
 .colorRandomBtn {
   background-image: linear-gradient(
   90deg,
