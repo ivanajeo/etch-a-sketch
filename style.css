@@ -92,7 +92,20 @@ body {
 
 .frame {
   padding: 1rem;
-  background-color: white;
+  background-image: linear-gradient(
+    40deg,
+    hsl(0deg 72% 48%) 0%,
+    hsl(25deg 83% 49%) 10%,
+    hsl(50deg 94% 50%) 20%,
+    hsl(98deg 100% 50%) 30%,
+    hsl(168deg 100% 50%) 40%,
+    hsl(238deg 100% 50%) 50%,
+    hsl(300deg 100% 50%) 60%,
+    hsl(1deg 100% 50%) 70%,
+    hsl(48deg 100% 50%) 80%,
+    hsl(79deg 100% 50%) 90%,
+    hsl(110deg 100% 50%) 100%
+  );
   border: 2px solid black;
 }
 
