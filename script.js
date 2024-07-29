@@ -50,7 +50,7 @@ function createSquares(squaresPerRow) {
 squareBtn.addEventListener("click", () => {
     let squaresPerRow;
     do {
-        squaresPerRow = parseInt(prompt("Number of squares? (max 100), 10"));
+        squaresPerRow = parseInt(prompt("Number of squares? (max 100)", 10));
     } while (isNaN(squaresPerRow) || squaresPerRow > 100);
 
     if (squaresPerRow) {

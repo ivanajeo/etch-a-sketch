@@ -174,3 +174,12 @@ body {
     flex-wrap: wrap;
 }
 
+.githubProfile {
+  cursor: pointer;
+  color: black;
+}
+
+.githubProfile:is(:hover, :active) {
+  color: blue;
+  text-decoration: none;
+}
