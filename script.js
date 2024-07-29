@@ -20,18 +20,17 @@ function createSquares(squaresPerRow) {
 
     const totalSquares = squaresPerRow ** 2;
     const squareWidth = `calc(100% / ${squaresPerRow})`;
-
+    
     for(let i = 0; i < totalSquares; i++) {
         let square = document.createElement("div");
         square.classList.add("square");
         square.style.flexBasis = squareWidth;
-        
        
-            
         let hoverCount = 0;
         square.addEventListener("mouseenter", () => {
             if (eraserMode) {
                 square.style.backgroundColor = "";
+
             } else {
                 hoverCount += 1;
                 let newOpacity = Math.min(hoverCount * 0.5, 1);
@@ -62,6 +61,11 @@ squareBtn.addEventListener("click", () => {
 
 eraserBtn.addEventListener("click", () => {
     eraserMode = !eraserMode;
+    if (eraserMode) {
+        eraserBtn.classList.add("eraserBtn-active");
+    } else {
+        eraserBtn.classList.remove("eraserBtn-active");
+    }
 })
 
 clearBtn.addEventListener("click", () => {
