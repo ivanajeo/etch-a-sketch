@@ -6,7 +6,8 @@ const colorBlackBtn = document.querySelector(".colorBlackBtn");
 const colorRandomBtn = document.querySelector(".colorRandomBtn");
 
 let eraserMode = false;
-let colorMode = "black";
+let colorBlackMode = true;
+let colorRandomMode = false;
 
 function getRandomBgColor() {
     let r = Math.floor(Math.random() * 256);
@@ -35,9 +36,9 @@ function createSquares(squaresPerRow) {
                 hoverCount += 1;
                 let newOpacity = Math.min(hoverCount * 0.5, 1);
                 let bgColor;
-                if (colorMode === "black") {
+                if (colorBlackMode) {
                     bgColor = `rgba(0, 0, 0, `;
-                } else if (colorMode === "random") {
+                } else if (colorRandomMode) {
                     bgColor = getRandomBgColor();
                 }
                 square.style.backgroundColor = `${bgColor}${newOpacity}`;
@@ -76,11 +77,12 @@ clearBtn.addEventListener("click", () => {
 });
 
 colorBlackBtn.addEventListener("click", () => {
-    colorMode = "black";
+    colorBlackMode = true;
+    colorRandomMode = false;
 })
 
 colorRandomBtn.addEventListener("click", () => {
-    colorMode = "random";
-
+    colorRandomMode = true;
+    colorBlackMode = false;
 })
 createSquares(10);
