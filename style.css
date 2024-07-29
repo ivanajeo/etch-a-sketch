@@ -85,6 +85,30 @@ body {
   gap: 0.5rem;
 }
 
+.colorBlackBtn {
+  background-color: #000;
+  color: #fff;
+}
+
+.colorRandomBtn {
+  background-image: linear-gradient(
+  90deg,
+  hsl(0deg 72% 48%) 0%,
+  hsl(25deg 83% 49%) 10%,
+  hsl(50deg 94% 50%) 20%,
+  hsl(98deg 100% 50%) 30%,
+  hsl(168deg 100% 50%) 40%,
+  hsl(238deg 100% 50%) 50%,
+  hsl(300deg 100% 50%) 60%,
+  hsl(1deg 100% 50%) 70%,
+  hsl(48deg 100% 50%) 80%,
+  hsl(79deg 100% 50%) 90%,
+  hsl(110deg 100% 50%) 100%
+);
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
 .btn {
   font-size: 1.5rem;
   padding: 0.75em 1em;
