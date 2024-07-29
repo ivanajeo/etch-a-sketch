@@ -16,6 +16,11 @@ function getRandomBgColor() {
     return `rgba(${r}, ${g}, ${b})`;
 }
 
+function updateButtonState(activeBtn, inactiveBtn) {
+    activeBtn.classList.add("colorBtn-active");
+    inactiveBtn.classList.remove("colorBtn-active");
+}
+
 function createSquares(squaresPerRow) {
     drawingPad.innerHTML = "";
 
@@ -50,12 +55,24 @@ squareBtn.addEventListener("click", () => {
     if (squaresPerRow) {
         createSquares(squaresPerRow);
     }
-})
+});
+
+colorBlackBtn.addEventListener("click", () => {
+    colorBlackMode = true;
+    colorRandomMode = false;
+    updateButtonState(colorBlackBtn, colorRandomBtn);
+});
+
+colorRandomBtn.addEventListener("click", () => {
+    colorRandomMode = true;
+    colorBlackMode = false;
+    updateButtonState(colorRandomBtn, colorBlackBtn);
+});
 
 eraserBtn.addEventListener("click", () => {
     eraserMode = !eraserMode;
     eraserBtn.classList.toggle("eraserBtn-active", eraserMode);
-})
+});
 
 clearBtn.addEventListener("click", () => {
     const squares = document.querySelectorAll(".square");
@@ -64,21 +81,5 @@ clearBtn.addEventListener("click", () => {
     });
 });
 
-function updateButtonState(activeBtn, inactiveBtn) {
-    activeBtn.classList.add("colorBtn-active");
-    inactiveBtn.classList.remove("colorBtn-active");
-}
-
-colorBlackBtn.addEventListener("click", () => {
-    colorBlackMode = true;
-    colorRandomMode = false;
-    updateButtonState(colorBlackBtn, colorRandomBtn);
-})
-
-colorRandomBtn.addEventListener("click", () => {
-    colorRandomMode = true;
-    colorBlackMode = false;
-    updateButtonState(colorRandomBtn, colorBlackBtn);
-})
 
 createSquares(10); // Initialize with 10 squares per row
