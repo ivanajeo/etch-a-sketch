@@ -74,17 +74,21 @@ clearBtn.addEventListener("click", () => {
     });
 });
 
+function updateButtonState(activeBtn, inactiveBtn) {
+    activeBtn.classList.add("colorBtn-active");
+    inactiveBtn.classList.remove("colorBtn-active");
+}
+
 colorBlackBtn.addEventListener("click", () => {
     colorBlackMode = true;
     colorRandomMode = false;
-    colorBlackBtn.classList.add("colorBtn-active");
-    colorRandomBtn.classList.remove("colorBtn-active");
+    updateButtonState(colorBlackBtn, colorRandomBtn);
 })
 
 colorRandomBtn.addEventListener("click", () => {
     colorRandomMode = true;
     colorBlackMode = false;
-    colorRandomBtn.classList.add("colorBtn-active");
-    colorBlackBtn.classList.remove("colorBtn-active");
+    updateButtonState(colorRandomBtn, colorBlackBtn);
 })
+
 createSquares(10);
