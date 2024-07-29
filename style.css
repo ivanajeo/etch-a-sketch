@@ -75,15 +75,16 @@ body {
 .btn {
   font-size: 1.5rem;
   padding: 0.75em 1em;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   border-left: 2px solid #ccc;
   border-top: 2px solid #ccc; 
   border-right: 2px solid #000; 
   border-bottom: 2px solid #000; 
+  transition: background-color 0.15s ease, border-color 0.2s ease, transform 0.1s ease;
 }
 
 .btn:hover {
-  background-color: #e6e6e6;
+  background-color:  #f0f0f0;
   border-left: 2px solid #000;
   border-top: 2px solid #000; 
   border-right: 2px solid #ccc; 
@@ -91,6 +92,7 @@ body {
 }
 
 .btn:active {
+  background-color:  #dbdbdb;
   transform: translateY(2px);
 }
 
@@ -127,12 +129,18 @@ body {
   hsl(48deg 100% 50%) 80%,
   hsl(79deg 100% 50%) 90%,
   hsl(110deg 100% 50%) 100%
-);
+  );
   color: #fff;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-
+.eraserBtn-active {
+  background-color: #dbdbdb;
+  border-left: 2px solid #000;
+  border-top: 2px solid #000; 
+  border-right: 2px solid #ccc; 
+  border-bottom: 2px solid #ccc; 
+}
 
 .frame {
   padding: 1rem;
