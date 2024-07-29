@@ -27,18 +27,12 @@ function createSquares(squaresPerRow) {
         square.classList.add("square");
         square.style.flexBasis = squareWidth;
        
-        let hoverCount = 0;
         square.addEventListener("mouseenter", () => {
             if (eraserMode) {
                 square.style.backgroundColor = "";
 
             } else {
-                let bgColor;
-                if (colorBlackMode) {
-                    bgColor = `rgba(0, 0, 0)`;
-                } else if (colorRandomMode) {
-                    bgColor = getRandomBgColor();
-                }
+                let bgColor = colorBlackMode ? "#000" : getRandomBgColor();
                 square.style.backgroundColor = `${bgColor}`;
             }
         })
