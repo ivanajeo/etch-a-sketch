@@ -13,7 +13,7 @@ function getRandomBgColor() {
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
-    return `rgba(${r}, ${g}, ${b}, `;
+    return `rgba(${r}, ${g}, ${b})`;
 }
 
 function createSquares(squaresPerRow) {
@@ -33,15 +33,13 @@ function createSquares(squaresPerRow) {
                 square.style.backgroundColor = "";
 
             } else {
-                hoverCount += 1;
-                let newOpacity = Math.min(hoverCount * 0.5, 1);
                 let bgColor;
                 if (colorBlackMode) {
-                    bgColor = `rgba(0, 0, 0, `;
+                    bgColor = `rgba(0, 0, 0)`;
                 } else if (colorRandomMode) {
                     bgColor = getRandomBgColor();
                 }
-                square.style.backgroundColor = `${bgColor}${newOpacity}`;
+                square.style.backgroundColor = `${bgColor}`;
             }
         })
         drawingPad.appendChild(square);
@@ -79,10 +77,14 @@ clearBtn.addEventListener("click", () => {
 colorBlackBtn.addEventListener("click", () => {
     colorBlackMode = true;
     colorRandomMode = false;
+    colorBlackBtn.classList.add("colorBtn-active");
+    colorRandomBtn.classList.remove("colorBtn-active");
 })
 
 colorRandomBtn.addEventListener("click", () => {
     colorRandomMode = true;
     colorBlackMode = false;
+    colorRandomBtn.classList.add("colorBtn-active");
+    colorBlackBtn.classList.remove("colorBtn-active");
 })
 createSquares(10);
