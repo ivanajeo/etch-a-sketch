@@ -1,4 +1,4 @@
-# Etch-a-Sketch 2.0 — Interactive Drawing on Hover!
+# Etch-a-Sketch 2.0 — Interactive Drawing on Hover!🌟
 
 Unleash your inner artist — one pixel at a time.  
 This modern reimagination of the classic **Etch A Sketch** lets you paint with nothing but a mouse hover. 
@@ -8,7 +8,7 @@ Fast, fluid, and oddly satisfying.
 [Click here to view the live demo](https://etch-a-sketch-hazel-three.vercel.app/)
 
 ## Preview
-
+<img src="./images/preview/etch-a-sketch-preview.gif" width="550"/>
 
 ## How It Works
 Just hover your mouse over the canvas and **watch it come to life**.  
